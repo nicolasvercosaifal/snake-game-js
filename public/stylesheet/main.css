@@ -1,6 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+ 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #69aaff;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+}
+ 
+
+.container {
+  display: flex;
+ 
+  justify-content: center;
+}
+
+
+
+.reload-button {
+  background-color: rgb(129, 65, 182);
+  border: none;
+  padding: 15px;
+  height: 70px;
+  width: 80px;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+}
+
+
+table {
+  border: blue;
+  border-collapse: collapse;
+  background-color: white;
+  /*background-color: #7bea00;*/
+}
+/*
+td {
+  background-color: #7bea00;
+ 
+}*/
+
+
 .jumbotron {
   background: #532F8C;
-  color: white;
+  color: rgb(211, 160, 160);
   padding-bottom: 80px; }
   .jumbotron .btn-primary {
     background: #845ac7;

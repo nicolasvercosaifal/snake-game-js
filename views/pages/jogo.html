@@ -133,8 +133,8 @@
         <div class="level">
             <span>Level</span>
             <button onclick="changeLevel(300)">fácil</button>
-            <button onclick="changeLevel(200)">médio</button>
-            <button onclick="changeLevel(150)">difícil</button>
+            <button onclick="changeLevel(250)">médio</button>
+            <button onclick="changeLevel(180)">difícil</button>
         </div>    
     </div>
 </div>
@@ -197,21 +197,21 @@
         document.getElementById(('td'+cobra[0][0])+'_'+cobra[0][1]).style.background="#5a00f2";
         var maca = document.getElementById('td'+mx+'_'+my).style.background="#ff3333";
         score.value = 1 
+        
         if(vivo) {
-            setTimeout('anda()', changeLevel());
+            setTimeout('anda()', 300);
 
         }else {
             alert('Fim de jogo');
         }   
-        
+         
         }
-
+        
         function changeLevel(velocidade) {
-            setTimeout(velocidade)
-        }   
-
-
-    anda();
+            setTimeout('anda()', velocidade)
+        }
+    
+        anda();
 
        function pegadirecao(tecla){
         /*alert(tecla);*/

@@ -13,38 +13,110 @@ h2 {
   font-weight: 500;
 }
  
-
 .container {
   display: flex;
- 
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between
+
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+}
+
+.side-bar {
+  background-color: rgb(34, 34, 34);
+  width: 15%;
+  max-width: 90px;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 10px;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.level {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+.level span {
+  font-size: large;
+  font-weight: 400;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+.level button {
+  background-color: rgb(0, 77, 29);
+  border: none;
+  border-radius: 2px;
+  padding: 6px;
+  color: white;
+  font-weight: 800;
+  font-size: large;
+  margin-right: 4px;
 }
 
 
+.level button:active {
+  background-color: rgb(157, 255, 0);
+  color: rgb(78, 78, 78);
+}
+
+.pontos {
+  margin-top: 10px;
+  text-align: center;
+  font-size:medium;
+  font-weight: 400;
+
+}
+
+.score-screen {
+  padding: 20px;
+  width: 36px;
+  height: 19px;
+  margin-top: 3px;
+
+}
+
+.score-screen:focus {
+  outline-width: 0;
+}
 
 .reload-button {
-  background-color: rgb(129, 65, 182);
+  background-color: #5a00f2;
   border: none;
   padding: 15px;
-  height: 70px;
+  height: 63px;
   width: 80px;
   font-weight: 900;
   color: white;
   cursor: pointer;
 }
 
-
 table {
   border: blue;
   border-collapse: collapse;
-  background-color: white;
-  /*background-color: #7bea00;*/
+  background-color: rgb(76, 199, 39);
 }
-/*
-td {
+
+#td6_0,#td7_1,#td8_2,#td9_3,#td8_0,#td9_1,#td9_9, #td10_10 ,#td4_0, #td5_1,#td6_2, #td7_3,#td8_4,#td9_5 ,#td2_0, #td3_1, #td4_2,#td5_3,#td6_4,#td7_5, #td8_6, #td9_7 ,#td0_0, #td1_1, #td2_2, #td3_3, #td4_4, #td5_5, #td6_6, #td7_7, #td8_8, #td9_9, #td0_2, #td1_3, #td2_4, #td3_5, #td4_6, #td5_7, #td6_8, #td7_9, #td0_4, #td1_5, #td2_6, #td3_7, #td4_8, #td5_9, #td0_6, #td1_7, #td2_8, #td3_9, #td4_10, #td0_8, #td1_9   {
   background-color: #7bea00;
- 
-}*/
+}
+
+
+
+
 
 
 .jumbotron {
@@ -73,4 +145,5 @@ td {
     border: 2px solid white; }
     .jumbotron .lang-logo img {
       max-width: 100%; }
+
 

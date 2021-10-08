@@ -71,6 +71,12 @@
         margin-right: 4px;
         }
         
+        .buttons a {
+            font-weight: 900;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
         
         .level button:active {
         background-color: rgb(157, 255, 0);
@@ -78,7 +84,8 @@
         }
         
         .pontos {
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 0;
         text-align: center;
         font-size:medium;
         font-weight: 400;
@@ -90,6 +97,9 @@
         width: 36px;
         height: 19px;
         margin-top: 3px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 14pt;
         
         }
         
@@ -97,7 +107,7 @@
         outline-width: 0;
         }
         
-        .reload-button {
+        .buttons {
         background-color: #5a00f2;
         border: none;
         padding: 15px;
@@ -124,9 +134,11 @@
 <h2>Nicolas Verçosa</h2>
 <div class="container">
     <div class="side-bar">
-        <button onclick="reiniciar()" class="reload-button">Reiniciar</button>
-        <span class="pontos">Pontuação:</span>
-        <input type="text" id="score" class="score-screen" readonly>    
+        <button onclick="reiniciar()" class="buttons">Reiniciar</button>
+        <span class="pontos">
+            Pontuação:       
+            <input type="text" id="score" class="score-screen" readonly>    
+        </span>
     </div>
     <div class="main-column">
         <div id=principal class="game-board"></div>
@@ -194,10 +206,12 @@
             //alert('Fim de Jogo')
         }
         
-        document.getElementById(('td'+cobra[0][0])+'_'+cobra[0][1]).style.background="#5a00f2";
-        var maca = document.getElementById('td'+mx+'_'+my).style.background="#ff3333";
-        score.value = 1 
-        
+        var snake = document.getElementById(('td'+cobra[0][0])+'_'+cobra[0][1]).style.background="#5a00f2";
+        var apple = document.getElementById('td'+mx+'_'+my).style.background="#ff3333";
+        var contagem = cobra.length - 1;
+        var contagemNaTela = contagem * 10
+        score.value = contagemNaTela;
+
         if(vivo) {
             setTimeout('anda()', 300);
 
@@ -205,32 +219,26 @@
             alert('Fim de jogo');
         }   
          
-        }
+    }
         
-        function changeLevel(velocidade) {
-            setTimeout('anda()', velocidade)
-        }
+    function changeLevel(velocidade) {
+        setTimeout('anda()', velocidade)
+    }
     
-        anda();
+    anda();
 
-       function pegadirecao(tecla){
-        /*alert(tecla);*/
-        if(tecla==37)direcao=0;
-        if(tecla==38)direcao=1;
-        if(tecla==39)direcao=2;
-        if(tecla==40)direcao=3;
+    function pegadirecao(tecla){
+    /*alert(tecla);*/
+    if(tecla==37)direcao=0;
+    if(tecla==38)direcao=1;
+    if(tecla==39)direcao=2;
+    if(tecla==40)direcao=3;
     }
 
     function reiniciar() {
         return document.location.href=""
     }
     
- /*   scoreCounter();
-    function scoreCounter() {
-        var screen = document.getElementById('score')
-        alert(maca)
-        score.value = maca
-    }*/
 </script>
 </body>
 </html>
